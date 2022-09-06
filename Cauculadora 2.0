@@ -1,0 +1,35 @@
+using static System.Console;
+
+char op;
+double um, dois, resultado;
+
+Write("Digite o Primeiro Valor: ");
+um = Convert.ToDouble(ReadLine());
+Write("Digite o Segundo Valor: ");
+dois = Convert.ToDouble(ReadLine());
+WriteLine("Escolha a Operação: (+, -, *, /): ");
+op = (char)Read();
+
+switch (op)
+{
+    case '+':
+        resultado = um + dois;
+        WriteLine("{0}+{1} = {2}", um, dois, resultado);
+        break;
+    case '-':
+        resultado = um - dois;
+        WriteLine("{0}-{1} = {2}", um, dois, resultado);
+        break;
+    case '*':
+        resultado = um * dois;
+        WriteLine("{0}x{1} = {2}", um, dois, resultado);
+        break;
+    case '/':
+        resultado = um / dois;
+        WriteLine("{0}/{1} = {2}", um, dois, resultado);
+        break;
+    default:
+        WriteLine("Operação Inválida!");
+        break;
+}
+ReadLine();
